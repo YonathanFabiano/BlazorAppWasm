@@ -1,0 +1,83 @@
+@page "/addmahasiswa"
+@using System.Net.Http
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+<h2>Add Data Mahasiswa</h2>
+
+    <div class="row">
+        <div class="mb-3">
+            <label for="ID" class="form-label">ID</label>
+            <div class="col-md-4">
+                <input form="ID" class="form-control" @bind="@mhs.id" />
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="NAMA" class="form-label">NAMA</label>
+            <div class="col-md-4">
+                <input form="Nama" class="form-control" @bind="@mhs.nama" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="NIM" class="form-label">NIM</label>
+            <div class="col-md-4">
+                <input form="NIM" class="form-control" @bind="@mhs.nim" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="ALAMAT" class="form-label">ALAMAT</label>
+            <div class="col-md-4">
+                <input form="Alamat" class="form-control" @bind="@mhs.alamat" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">Email</label>
+            <div class="col-md-4">
+                <input form="Email" class="form-control" @bind="@mhs.email" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="Foto" class="form-label">Foto</label>
+            <div class="col-md-4">
+                <input form="Foto" class="form-control" @bind="@mhs.foto" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="NIM PROGMOB" class="form-label">NIM Progmob</label>
+            <div class="col-md-4">
+                <input form="NIM PROGMOB" class="form-control" @bind="@mhs.nim_progmob" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+                <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+@code{
+        Mahasiswa mhs = new Mahasiswa();
+
+        protected override async Task OnInitializedAsync(){
+        }
+
+        protected async Task Save(){
+            var response = await Http.PostAsJsonAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/create", @mhs);
+            Mahasiswa personResponse = await response.Content.ReadFromJsonAsync<Mahasiswa>();
+                if (personResponse?.id > 0){
+                    await JsRuntime.InvokeVoidAsync("alert", "Saved Successfully!");
+                    NavigationManager.NavigateTo("mahasiswa");
+                }
+            }
+
+            void Cancel(){
+                NavigationManager.NavigateTo("mahasiswa");
+            }
+    }

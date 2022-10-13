@@ -5,59 +5,74 @@
 
 <PageTitle>Mahasiswa UKDW</PageTitle>
 
-<h1>Mahasiswa SI UKDW</h1>
+<h2>Mahasiswa SI UKDW</h2>
 
 <p>Daftar mahasiswa baik :p.</p>
 
-@if (mhs == null)
-{
+<div class="row">
+    <div class="col-md-6">
+        <a href='/addmahasiswa' class="btn btn-primary" role="button">
+            <i class="fas fa-user-plus"></i>
+            Add Mahasiswa Baru
+        </a>
+    </div>
+
+    <div class="input-group col">
+        <input type="text" class="form-control" @onclick="FilterUser" placeholder="Cari Mahasiswa" @bind="SearchString" />
+        <a class="btn btn-primary" role="button" @onclick="FilterUser">Cari</a>
+    </div>
+</div>
+
+@if (mhs == null){
     <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAMA</th>
-                <th>NIM</th>
-                <th>ALAMAT</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var siswa in mhs)
-            {
+}else{
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@siswa.id</td>
-                    <td>@siswa.nama</td>
-                    <td>@siswa.nim</td>
-                    <td>@siswa.alamat</td>
+                    <th>ID</th>
+                    <th>NAMA</th>
+                    <th>NIM</th>
+                    <th>ALAMAT</th>
+                    <th>EMAIL</th>
+                    <th>FOTO</th>
+                    <th>ACTION</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
-
-@code {
-    private Mahasiswa[]? mhs;
-
-    protected override async Task OnInitializedAsync()
-    {
-        mhs = await Http.GetFromJsonAsync<Mahasiswa[]>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/72170100");
+            </thead>
+            <tbody>
+                @foreach (var siswa in mhs){
+                    <tr>
+                        <td>@siswa.id</td>
+                        <td>@siswa.nama</td>
+                        <td>@siswa.nim</td>
+                        <td>@siswa.alamat</td>
+                        <td>@siswa.email</td>
+                        <td>@siswa.foto</td>
+                        <td>
+                            <a href="#editperson#@siswa.id">Edit</a>
+                            <a href="#deleteperson#@siswa.id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
 
-    public class Mahasiswa
-    {
-        public int id { get; set; }
+@code{
+    protected List<Mahasiswa> searchUserData = new();
+    protected override async Task OnInitializedAsync(){
+        mhs = await Http.GetFromJsonAsync<List<Mahasiswa>>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/72170177");
+        searchUserData = mhs;
+    }
 
-        public string nama { get; set; }
-
-        public string nim { get; set; }
-
-        public string alamat { get; set; }
-
-        public string email { get; set; }
-
-        public string foto { get; set; }
+    protected List<Mahasiswa> mhs = new();
+    protected string SearchString { get; set; } = string.Empty;
+    protected void FilterUser(){
+        if (!string.IsNullOrEmpty(SearchString)){
+            mhs = searchUserData
+                .Where(x => x.nim.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) != -1)
+                .ToList();
+        }else{
+            mhs = searchUserData;
+        }
     }
 }
