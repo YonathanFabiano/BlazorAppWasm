@@ -2,7 +2,7 @@
 @using System.Net.Http
 @using System.Net.Http.Json
 @inject HttpClient Http
-@inject NavigationManager NavigationManager
+@inject NavigationManager Navigate
 @inject IJSRuntime JsRuntime
 
 <h2>Add Data Mahasiswa</h2>
@@ -66,18 +66,19 @@
         Mahasiswa mhs = new Mahasiswa();
 
         protected override async Task OnInitializedAsync(){
-        }
+                mhs = await Http.GetFromJsonAsync<Mahasiswa>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/72170177");
+            }
 
         protected async Task Save(){
             var response = await Http.PostAsJsonAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/create", @mhs);
-            Mahasiswa personResponse = await response.Content.ReadFromJsonAsync<Mahasiswa>();
-                if (personResponse?.id > 0){
+            Mahasiswa insert = await response.Content.ReadFromJsonAsync<Mahasiswa>();
+                if (insert?.id > 0){
                     await JsRuntime.InvokeVoidAsync("alert", "Saved Successfully!");
-                    NavigationManager.NavigateTo("mahasiswa");
+                    Navigate.NavigateTo("mahasiswa");
                 }
-            }
+        }
 
-            void Cancel(){
-                NavigationManager.NavigateTo("mahasiswa");
-            }
+        void Cancel(){
+            Navigate.NavigateTo("mahasiswa");
+        }
     }

@@ -7,7 +7,7 @@
 
 <h2>Mahasiswa SI UKDW</h2>
 
-<p>Daftar mahasiswa baik :p.</p>
+<p>Daftar mahasiswa.</p>
 
 <div class="row">
     <div class="col-md-6">
@@ -18,8 +18,8 @@
     </div>
 
     <div class="input-group col">
-        <input type="text" class="form-control" @onclick="FilterUser" placeholder="Cari Mahasiswa" @bind="SearchString" />
-        <a class="btn btn-primary" role="button" @onclick="FilterUser">Cari</a>
+        <input type="text" class="form-control" @onclick="CariData" placeholder="Cari Mahasiswa" @bind="SearchString" />
+        <a class="btn btn-primary" role="button" @onclick="CariData">Cari</a>
     </div>
 </div>
 
@@ -48,8 +48,8 @@
                         <td>@siswa.email</td>
                         <td>@siswa.foto</td>
                         <td>
-                            <a href="#editperson#@siswa.id">Edit</a>
-                            <a href="#deleteperson#@siswa.id">Delete</a>
+                            <a href="/editperson/@siswa.id">Edit</a>
+                            <a href="/deleteperson/@siswa.id">Delete</a>
                         </td>
                     </tr>
                 }
@@ -66,7 +66,7 @@
 
     protected List<Mahasiswa> mhs = new();
     protected string SearchString { get; set; } = string.Empty;
-    protected void FilterUser(){
+    protected void CariData(){
         if (!string.IsNullOrEmpty(SearchString)){
             mhs = searchUserData
                 .Where(x => x.nim.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) != -1)

@@ -1,0 +1,85 @@
+@page "/editperson/{Id}"
+@using System.Net.Http
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Navigate
+@inject IJSRuntime JsRuntime
+
+<h2>Edit Data Mahasiswa</h2>
+<div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="ID"> ID *</label>
+                <input form="ID" class="form-control" @bind="@mhs.id" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nama"> Nama *</label>
+                <input form="Nama" class="form-control" @bind="@mhs.nama" />
+            </div>
+         </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="NIM"> NIM *</label>
+                <input form="NIM" class="form-control" @bind="@mhs.nim" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Alamat"> Alamat *</label>
+                <input form="Alamat" class="form-control" @bind="@mhs.alamat" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Email"> Email *</label>
+                <input form="Email" class="form-control" @bind="@mhs.email" />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Foto"> Foto *</label>
+                <input form="Foto" class="form-control" @bind="@mhs.foto" />
+            </div>
+        </div>
+
+</div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+                <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+@code {
+
+        public string Id { get; set; }
+
+        Mahasiswa mhs = new Mahasiswa();
+        protected override async Task OnInitializedAsync(){
+            mhs = await Http.GetFromJsonAsync<Mahasiswa>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/72170177");
+        }
+
+        protected async Task Save(){
+            var response = await Http.PutAsJsonAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/update" + Id, @mhs);
+            bool personResponse = await response.Content.ReadFromJsonAsync<bool>();
+                if (personResponse){
+                    await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
+                    Navigate.NavigateTo("mahasiswa");
+                }
+        }
+        
+        void Cancel(){
+            Navigate.NavigateTo("mahasiswa");
+        }
+    }

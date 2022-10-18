@@ -1,0 +1,67 @@
+@page "/deleteperson/{Id}"
+@using System.Net.Http
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Navigate
+@inject IJSRuntime JsRuntime
+
+<h2>Delete Data Mahasiswa</h2>
+
+@if(mhs != null){
+    <div class="row">
+        <table class="table">
+            <tr>
+                <td>ID</td>
+                <td>@mhs.id</td>
+            </tr>
+            <tr>
+                <td>NAMA</td>
+                <td>@mhs.nama</td>
+            </tr>
+            <tr>
+                <td>NIM</td>
+                <td>@mhs.nim</td>
+            </tr>
+            <tr>
+                <td>ALAMAT</td>
+                <td>@mhs.alamat</td>
+            </tr>
+            <tr>
+                <td>EMAIL</td>
+                <td>@mhs.email</td>
+            </tr>
+            <tr>
+                <td>FOTO</td>
+                <td>@mhs.foto</td>
+            </tr>
+        </table>
+    </div>
+}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@Delete" value="Delete" />
+                <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+@code{
+        Mahasiswa mhs = new Mahasiswa();
+
+        protected override async Task OnInitializedAsync(){
+            mhs = await Http.GetFromJsonAsync<Mahasiswa>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/72170177");
+            }
+
+        protected async Task Delete(){
+            var response = await Http.DeleteAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/delete");
+            bool delete = await response.Content.ReadFromJsonAsync<bool>();
+                if (delete){
+                    await JsRuntime.InvokeVoidAsync("alert", "Deleted Successfully!");
+                    Navigate.NavigateTo("mahasiswa");
+                }
+        }
+        void Cancel(){
+            Navigate.NavigateTo("mahasiswa");
+        }
+    }
