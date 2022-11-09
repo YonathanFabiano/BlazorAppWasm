@@ -1,85 +1,130 @@
-@page "/editperson/{Id}"
+@page "/mahasiswa/ubah/{nim_progmob?}/{id?}/{nim?}"
 @using System.Net.Http
 @using System.Net.Http.Json
+@using System.ComponentModel.DataAnnotations
 @inject HttpClient Http
-@inject NavigationManager Navigate
-@inject IJSRuntime JsRuntime
 
-<h2>Edit Data Mahasiswa</h2>
-<div class="row">
+<PageTitle>Ubah Mahasiswa</PageTitle>
 
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="ID"> ID *</label>
-                <input form="ID" class="form-control" @bind="@mhs.id" />
+<h1>Ubah Mahasiswa SI UKDW</h1>
+
+<p>This component demonstrates fetching data Mahasiswa from the server.</p>
+
+@if (mhs == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <EditForm Model="@mhs" OnValidSubmit="@UpdateMhs">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group row">
+            <label for="nama" class="col-sm-2 col-form-label">
+                Nama
+            </label>
+            <div class="col-sm-10">
+                <ValidationMessage For="@(() => mhs.nama)" />
+                <InputText id="nama" class="form-control" placeholder="Nama"
+                    @bind-Value="mhs.nama" />
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Nama"> Nama *</label>
-                <input form="Nama" class="form-control" @bind="@mhs.nama" />
-            </div>
-         </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="NIM"> NIM *</label>
-                <input form="NIM" class="form-control" @bind="@mhs.nim" />
+        <div class="form-group row">
+            <label for="nim" class="col-sm-2 col-form-label">
+                Nim
+            </label>
+            <div class="col-sm-10">
+                <ValidationMessage For="@(() => mhs.nim)" />
+                <InputText id="nim" class="form-control" placeholder="NIM"
+                    @bind-Value="mhs.nim" />
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Alamat"> Alamat *</label>
-                <input form="Alamat" class="form-control" @bind="@mhs.alamat" />
+        <div class="form-group row">
+            <label for="alamat" class="col-sm-2 col-form-label">
+                Alamat
+            </label>
+            <div class="col-sm-10">
+                <ValidationMessage For="@(() => mhs.alamat)" />
+                <InputTextArea id="alamat" class="form-control" placeholder="Alamat"
+                    @bind-Value="mhs.alamat" />
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Email"> Email *</label>
-                <input form="Email" class="form-control" @bind="@mhs.email" />
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">
+                Email
+            </label>
+            <div class="col-sm-10">
+                <ValidationMessage For="@(() => mhs.email)" />
+                <InputText id="email" class="form-control" placeholder="Email"
+                    @bind-Value="mhs.email" />
             </div>
         </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="Foto"> Foto *</label>
-                <input form="Foto" class="form-control" @bind="@mhs.foto" />
+        <div class="form-group row">
+            <label for="foto" class="col-sm-2 col-form-label">
+                Foto
+            </label>
+            <div class="col-sm-10">
+                <ValidationMessage For="@(() => mhs.foto)" />
+                <InputText id="foto" class="form-control" placeholder="Foto"
+                    @bind-Value="mhs.foto" />
             </div>
         </div>
-
-</div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-group">
-                <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
-                <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
-            </div>
-        </div>
-    </div>
+        <button type="submit">Simpan</button>
+        <button type="submit" @onclick="DeleteMhs">Hapus</button>
+    </EditForm>
+}
 
 @code {
+    [Parameter]
+    public string nim_progmob { get; set; }
 
-        public string Id { get; set; }
+    [Parameter]
+    public string nim { get; set; }
+    
+    [Parameter]
+    public string id { get; set; }
+    private Mahasiswa mhs = new();
+    private Mahasiswa[]? lmhs;
 
-        Mahasiswa mhs = new Mahasiswa();
-        protected override async Task OnInitializedAsync(){
-            mhs = await Http.GetFromJsonAsync<Mahasiswa>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/72170177");
-        }
+    public async Task UpdateMhs(){
+        mhs.nim_progmob = "72200396";
+        await Http.PostAsJsonAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/update", mhs);
+    }
+    public async Task DeleteMhs(){
+        mhs.nim_progmob = nim_progmob;
+        mhs.id = Int32.Parse(id);
+        await Http.PostAsJsonAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/delete", mhs);
+    }
 
-        protected async Task Save(){
-            var response = await Http.PutAsJsonAsync("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/update" + Id, @mhs);
-            bool personResponse = await response.Content.ReadFromJsonAsync<bool>();
-                if (personResponse){
-                    await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
-                    Navigate.NavigateTo("mahasiswa");
-                }
-        }
-        
-        void Cancel(){
-            Navigate.NavigateTo("mahasiswa");
+    protected override async Task OnInitializedAsync()
+    {
+        lmhs = await Http.GetFromJsonAsync<Mahasiswa[]>("https://kpsi.fti.ukdw.ac.id/api/progmob/mhs/"+nim_progmob+"/"+nim);
+        foreach(var mh in lmhs){
+            if(mh.id == Int32.Parse(id)){
+                mhs = mh;
+            }
         }
     }
+
+    public class Mahasiswa
+    {
+        public int? id { get; set; }
+
+        [Required(ErrorMessage = "Nama belum diisi")]
+        public string nama { get; set; }
+
+        [Required(ErrorMessage = "NIM belum diisi")]
+        public string nim { get; set; }
+
+        [Required(ErrorMessage = "Alamat belum diisi")]
+        public string alamat { get; set; }
+
+        [Required(ErrorMessage = "Email belum diisi")]
+        public string email { get; set; }
+
+        [Required(ErrorMessage = "Foto belum diisi")]
+        public string foto { get; set; }
+
+        public string nim_progmob { get; set; }
+    }
+}
