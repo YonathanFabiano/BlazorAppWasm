@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "QhNl2hc9CAjos5PBhl+8jYoG7lNIpwZFSuuTn4RgiyA=",
+  "Source": "ComponentLibrary",
+  "BasePath": "_content/ComponentLibrary",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ComponentLibrary\\wwwroot",
+      "Source": "ComponentLibrary",
+      "ContentRoot": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\wwwroot\\",
+      "BasePath": "_content/ComponentLibrary",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ComponentLibrary.styles.css",
+      "SourceId": "ComponentLibrary",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/ComponentLibrary",
+      "RelativePath": "ComponentLibrary.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ComponentLibrary.styles.css"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ComponentLibrary.bundle.scp.css",
+      "SourceId": "ComponentLibrary",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/ComponentLibrary",
+      "RelativePath": "ComponentLibrary.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ComponentLibrary.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\wwwroot\\background.png",
+      "SourceId": "ComponentLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\wwwroot\\",
+      "BasePath": "_content/ComponentLibrary",
+      "RelativePath": "background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\background.png"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\wwwroot\\exampleJsInterop.js",
+      "SourceId": "ComponentLibrary",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BlazorAppWasm\\lib\\ComponentLibrary\\wwwroot\\",
+      "BasePath": "_content/ComponentLibrary",
+      "RelativePath": "exampleJsInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
+    }
+  ]
+}
