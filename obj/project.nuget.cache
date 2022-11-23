@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4A10ZRt094irdJuKuh3dbZmGuf5efxnZFY0Lh1f4ToCE14Z15PYBdM/4lw1JY0UespmHw4F+x6LOis4bBZYdcA==",
+  "dgSpecHash": "E31vmsUZaZYVmNZpV4cQG8UNUfo2435uIWwP5gpNqRljP4E/MT5LP/gYHJbEaiKTs9rSU8vgj4CJn8+3RicsGQ==",
   "success": true,
   "projectFilePath": "D:\\BlazorAppWasm\\BlazorAppWasm.csproj",
   "expectedPackageFiles": [
@@ -28,12 +28,13 @@
     "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\microsoft.jsinterop\\6.0.10\\microsoft.jsinterop.6.0.10.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.9\\microsoft.jsinterop.webassembly.6.0.9.nupkg.sha512",
+    "C:\\Users\\fabia\\.nuget\\packages\\mudblazor\\6.1.2\\mudblazor.6.1.2.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\fabia\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\fabia\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.10\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.10.nupkg.sha512"
+    "C:\\Users\\fabia\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.11\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }
