@@ -8,17 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = ComponentLibrary
 build_property.RootNamespace = ComponentLibrary
-build_property.ProjectDir = D:\BlazorAppWasm\lib\ComponentLibrary\
+build_property.ProjectDir = d:\BlazorAppWasm\lib\ComponentLibrary\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\BlazorAppWasm\lib\ComponentLibrary
+build_property.MSBuildProjectDirectory = d:\BlazorAppWasm\lib\ComponentLibrary
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/BlazorAppWasm/lib/ComponentLibrary/ExtraStyles.razor]
+[d:/BlazorAppWasm/lib/ComponentLibrary/ExtraStyles.razor]
 build_metadata.AdditionalFiles.TargetPath = RXh0cmFTdHlsZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BlazorAppWasm/lib/ComponentLibrary/Component1.razor]
+[d:/BlazorAppWasm/lib/ComponentLibrary/Component1.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50MS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-r7wl1itmzi
