@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f8PPEnOZMTgFnu1XJaF1rdSXSnNmT9EwxdhOkhCrGVE=",
+  "Hash": "4ddEnsPKWMbhcyBf4WnaGKb6y0VI+PKvVCsz41WRSX8=",
   "Source": "BlazorAppWasm",
   "BasePath": "/",
   "Mode": "Root",
@@ -221,6 +221,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.11\\runtimes\\browser-wasm\\native\\dotnet.wasm"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\es\\BlazorAppWasm.resources.dll",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/es/BlazorAppWasm.resources.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Related",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorAppWasm.dll",
+      "AssetTraitName": "Culture",
+      "AssetTraitValue": "es",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\es\\BlazorAppWasm.resources.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
@@ -509,7 +526,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll",
@@ -580,6 +597,40 @@
       "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.FileSystemGlobbing.dll"
     },
     {
+      "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.1\\lib\\netstandard2.0\\Microsoft.Extensions.Localization.Abstractions.dll"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.localization\\7.0.1\\lib\\netstandard2.0\\Microsoft.Extensions.Localization.dll"
+    },
+    {
       "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -594,7 +645,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.2\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
+      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll",
@@ -628,7 +679,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Options.dll"
+      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Options.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
@@ -645,7 +696,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Primitives.dll"
+      "OriginalItemSpec": "C:\\Users\\fabia\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Primitives.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
@@ -4031,6 +4082,23 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\82d7EDjj.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Primitives.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
+    },
+    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\8bH+kCDm.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -4439,23 +4507,6 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.Watcher.dll"
     },
     {
-      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\CD51s3vn.gz",
-      "SourceId": "BlazorAppWasm",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Options.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
-    },
-    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\cYOAZbIF.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -4660,6 +4711,23 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.AccessControl.dll"
     },
     {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\EIFvkdxJ.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.dll"
+    },
+    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\EJBwW9S+.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -4813,6 +4881,23 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.InteropServices.RuntimeInformation.dll"
     },
     {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\fq90rizS.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/es/BlazorAppWasm.resources.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\es\\BlazorAppWasm.resources.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\es\\BlazorAppWasm.resources.dll"
+    },
+    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\FssO1Wjp.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -4864,23 +4949,6 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Resources.Reader.dll"
     },
     {
-      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\Ggcf1ATz.gz",
-      "SourceId": "BlazorAppWasm",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
-    },
-    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\ghcAbsll.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -4913,6 +4981,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ComponentLibrary.pdb"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\H+ZN1dWt.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\h3Wv5fme.gz",
@@ -5646,23 +5731,6 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WindowsBase.dll"
     },
     {
-      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\NJskr+Sd.gz",
-      "SourceId": "BlazorAppWasm",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Primitives.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
-    },
-    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\nMpQwe1M.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -5695,6 +5763,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.dll"
+    },
+    {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\nsq7CXyB.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Options.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\Od2K6Oot.gz",
@@ -6020,6 +6105,23 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Private.Uri.dll"
     },
     {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\q2SAwvdg.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Localization.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Localization.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\qEeQwPXN.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -6292,6 +6394,23 @@
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Text.Encoding.Extensions.dll"
     },
     {
+      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\sYLSduEi.gz",
+      "SourceId": "BlazorAppWasm",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\t+xC1Lsu.gz",
       "SourceId": "BlazorAppWasm",
       "SourceType": "Computed",
@@ -6494,23 +6613,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.dll"
-    },
-    {
-      "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\UkWfRvPW.gz",
-      "SourceId": "BlazorAppWasm",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\BlazorAppWasm\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\BlazorAppWasm\\obj\\Debug\\net6.0\\build-gz\\uXf5YVXw.gz",
